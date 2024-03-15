@@ -22,18 +22,19 @@ const LandingPage = () => {
           Welcome to the landing page
         </h1>
         <p className="m-4 text-black">
-          This is a React 18 starter template with security and proper structure
-          with following features:
+          This is a React starter template with out of the box features and
+          configurations for:
         </p>
-        <ul className="list-disc list-inside text-black">
+        <ul className="list-disc list-inside text-black mb-4">
           <li>React + Vite + Typescript + Eslint + Prettier</li>
           <li>Tailwind Css</li>
+          <li>Dark mode</li>
           <li>Redux toolkit</li>
           <li>Redux persist</li>
           <li>React Router</li>
           <li>Error Boundary</li>
         </ul>
-
+        This is a persisted counter
         <div className="flex items-center mt-4">
           <button
             onClick={handleDecrement}
