@@ -5,10 +5,4 @@ import { defineConfig } from "vite";
 export default defineConfig({
   base: "/React-OP-Template/",
   plugins: [react()],
-  server: {
-    port: 3000,
-  },
-  preview: {
-    port: 5000,
-  },
 });
