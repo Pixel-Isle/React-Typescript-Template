@@ -8,7 +8,7 @@ import SomethingWentWrong, {
   PageLoading,
 } from "./components/VisualFeedbacks.tsx";
 import "./index.css";
-import { routes } from "./routes.tsx";
+import { routes } from "./routes.ts";
 import appStore from "./store/store.ts";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
