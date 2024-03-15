@@ -1,15 +1,24 @@
 //@ts-ignore
+import nightwind from "nightwind/helper";
+import { useDispatch, useSelector } from "react-redux";
+import { selectMode, toggleMode } from "../store/slice";
 
 const DarkModeToggle = () => {
-  const handleDarkModeToggle = () => {
-    // dispatch(toggleMode());
+  const mode = useSelector(selectMode);
+  const dispatch = useDispatch();
+
+  const isDarkMode = nightwind.checkNightMode();
+
+  const handleChangeDarkMode = () => {
+    nightwind.toggle();
+    dispatch(toggleMode());
   };
 
-  const isDarkMode = localStorage.getItem("nightwind-mode") === "dark";
+  console.log("mod2e", mode, isDarkMode);
 
   return (
     <div>
-      <button onClick={handleDarkModeToggle}>
+      <button onClick={handleChangeDarkMode}>
         {isDarkMode ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
