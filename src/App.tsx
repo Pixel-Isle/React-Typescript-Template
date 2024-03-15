@@ -5,7 +5,7 @@ import { routes } from "./routes";
 
 function App() {
   return (
-    <BrowserRouter basename="/React-OP-Template">
+    <BrowserRouter>
       <Routes>
         <Route path={routes.landing} element={<LandingPage />} />
         <Route path="*" element={<NotFoundPage />} />
