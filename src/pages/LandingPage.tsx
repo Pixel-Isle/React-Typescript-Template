@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
+import Navbar from "../components/Navbar";
 import { decrement, increment, selectCounter } from "../store/slice";
 
 const LandingPage = () => {
@@ -14,35 +15,40 @@ const LandingPage = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen flex-col">
-      <h1 className="text-2xl font-bold">Welcome to the landing page</h1>
-      <p className="mb-4">
-        This is a React 18 starter template with security and proper structure
-        with following features:
-      </p>
-      <ul className="list-disc list-inside">
-        <li>React + Vite + Typescript + Eslint + Prettier</li>
-        <li>Tailwind Css</li>
-        <li>Redux toolkit</li>
-        <li>Redux persist</li>
-        <li>React Router</li>
-        <li>Error Boundary</li>
-      </ul>
+    <div className="bg-white h-screen">
+      <Navbar />
+      <div className="flex justify-center items-center h-[80vh] flex-col">
+        <h1 className="text-2xl text-black font-bold">
+          Welcome to the landing page
+        </h1>
+        <p className="m-4 text-black">
+          This is a React 18 starter template with security and proper structure
+          with following features:
+        </p>
+        <ul className="list-disc list-inside text-black">
+          <li>React + Vite + Typescript + Eslint + Prettier</li>
+          <li>Tailwind Css</li>
+          <li>Redux toolkit</li>
+          <li>Redux persist</li>
+          <li>React Router</li>
+          <li>Error Boundary</li>
+        </ul>
 
-      <div className="flex items-center mt-4">
-        <button
-          onClick={handleDecrement}
-          className="bg-red-500 text-white px-4 py-2 rounded-lg"
-        >
-          -
-        </button>
-        <p className="mx-4">{counter}</p>
-        <button
-          onClick={handleIncrement}
-          className="bg-green-500 text-white px-4 py-2 rounded-lg"
-        >
-          +
-        </button>
+        <div className="flex items-center mt-4">
+          <button
+            onClick={handleDecrement}
+            className="bg-red-500 text-white px-4 py-2 rounded-lg"
+          >
+            -
+          </button>
+          <p className="mx-4 text-black">{counter}</p>
+          <button
+            onClick={handleIncrement}
+            className="bg-green-500 text-white px-4 py-2 rounded-lg"
+          >
+            +
+          </button>
+        </div>
       </div>
     </div>
   );

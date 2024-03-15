@@ -3,9 +3,10 @@ import { AppState } from "./appState";
 
 const initialState = {
   count: 0,
+  mode: "light",
 };
 
-const counterSlice = createSlice({
+const defaultSlice = createSlice({
   name: "counter",
   initialState,
   reducers: {
@@ -15,9 +16,13 @@ const counterSlice = createSlice({
     decrement: (state) => {
       state.count -= 1;
     },
+    toggleMode: (state) => {
+      state.mode = state.mode === "light" ? "dark" : "light";
+    },
   },
 });
 
-export const { increment, decrement } = counterSlice.actions;
-export const selectCounter = (state: AppState) => state.counter.count;
-export default counterSlice.reducer;
+export const { increment, decrement, toggleMode } = defaultSlice.actions;
+export const selectCounter = (state: AppState) => state.default.count;
+export const selectMode = (state: AppState) => state.default.mode;
+export default defaultSlice.reducer;

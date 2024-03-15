@@ -1,7 +1,7 @@
 import { combineReducers } from "@reduxjs/toolkit";
 import { getPersistConfig } from "redux-deep-persist";
 import { persistReducer } from "redux-persist";
-import counterReducer from "./slice";
+import defaultReducer from "./slice";
 import storage from "./storage";
 
 const storageKeys = {
@@ -13,7 +13,7 @@ const storageKeys = {
 
 const rootReducer = combineReducers({
   // You can also use different keys for different parts of the state
-  counter: counterReducer,
+  default: defaultReducer,
 });
 
 const config = getPersistConfig({
