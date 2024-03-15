@@ -15,9 +15,9 @@ const LandingPage = () => {
   };
 
   return (
-    <div className="bg-white h-screen">
+    <div className="bg-white">
       <Navbar />
-      <div className="flex justify-center items-center h-[80vh] flex-col">
+      <div className="flex justify-center items-center h-screen  flex-col">
         <h1 className="text-2xl text-black font-bold">
           Welcome to the landing page
         </h1>
