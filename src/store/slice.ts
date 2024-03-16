@@ -3,7 +3,7 @@ import { AppState } from "./appState";
 
 const initialState = {
   count: 0,
-  mode: "light",
+  mode: "dark",
 };
 
 const defaultSlice = createSlice({
